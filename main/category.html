@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары в категории</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <link rel="stylesheet" href="./js/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="./js/owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="max-w-[1920px] min-w-[375px] relative">
+
+    <header class="fixed top-0 right-0 left-0 w-full h-auto z-50 bg-white">
+
+        <div class="hidden lg:block w-full h-auto bg-main">
+            <div class="container px-5 xl:px-0 h-12 flex items-center justify-between">
+                <div class="flex items-center justify-start">   
+                    <div class="flex items-center justify-start font-pt-sans text-white font-normal text-base">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <span class="ml-2">Москва, Красная площадь, д. 1</span>
+                    </div>
+                    <div class="flex items-center justify-start font-pt-sans text-white font-normal text-base ml-7">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
+                        </svg>
+                        <a href="mailto:info@snabstroy.ru" class="ml-2">info@snabstroy.ru</a>
+                    </div>
+                </div>
+                <div class="hidden h-full 2xl:flex items-stretch justify-end font-pt-sans font-normal text-white text-base">
+                    <a href="" class="px-6 hover:bg-white hover:text-black hover:px-6 duration-300 ease-in-out flex items-center">О компании</a>
+                    <a href="" class="px-6 hover:bg-white hover:text-black hover:px-6 duration-300 ease-in-out flex items-center">Оплата и доставка</a>
+                    <a href="" class="px-6 hover:bg-white hover:text-black hover:px-6 duration-300 ease-in-out flex items-center">Возврат</a>
+                    <a href="" class="px-6 hover:bg-white hover:text-black hover:px-6 duration-300 ease-in-out flex items-center">Новости</a>
+                    <a href="" class="px-6 hover:bg-white hover:text-black hover:px-6 duration-300 ease-in-out flex items-center">Контакты</a>
+                    <a href="" class="px-6 hover:bg-white hover:text-black hover:px-6 duration-300 ease-in-out flex items-center">Распродажа</a>
+                    <a href="" class="px-6 hover:bg-white hover:text-black hover:px-6 duration-300 ease-in-out flex items-center">Каталог</a>
+                    <a href="" class="px-6 last:pr-0 hover:bg-white hover:text-black hover:px-6 duration-300 ease-in-out flex items-center">Личный кабинет</a>
+                </div>
+
+                <button class="2xl:hidden h-full flex items-center justify-end font-pt-sans font-normal text-white text-base">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="w-full h-auto">
+            <div class="container px-5 xl:px-0 h-16 lg:h-24 flex items-center justify-between">
+                <a href="">
+                    <img src="./images/logo.png" class="h-7 lg:h-14">
+                </a>
+                
+                <i class="hidden 2xl:block w-[2px] bg-neutral-300 h-12"></i>
+
+                <button href="" class="hidden 2xl:w-[550px] xl:flex items-center justify-between border-[1px] border-solid border-neutral-300 hover:border-neutral-400 px-4 py-3 rounded-xl font-pt-sans font-normal text-neutral-400 text-base duration-300 ease-in-out" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">
+                    <div>Найдите нужный товар среди сотни наименований...</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+
+                <div class="hidden lg:flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <div class="ml-3">
+                        <a href="tel:+7 999 999-99-99" class="font-rubik font-bold text-xl text-black">+7 999 999-99-99</a>
+                        <div class="font-pt-sans font-normal text-xs text-black">Ежедневно 08:00 - 22:00</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center">
+                    <a href="" class="hidden px-5 py-3 ml-2 border-2 border-main border-solid bg-main hover:bg-white rounded-xl lg:flex items-center justify-center font-pt-sans font-normal text-base text-white hover:text-main duration-300 ease-in-out">
+                        <span class="ml-1">Скачать прайс</span>
+                    </a>
+                    <button class="hidden xl:hidden px-4 xl:px-5 py-3 ml-2 border-2 border-main border-solid hover:bg-main rounded-xl lg:flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                    <a href="" class="px-4 xl:px-5 py-3 lg:ml-2 lg:border-2 lg:border-main lg:border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <span class="ml-1 hidden xl:block">Корзина</span>
+                    </a>
+                    <button snabstroy-status="0" class="adapt_menu_btn px-4 xl:px-5 py-3 lg:ml-2 lg:border-2 lg:border-main lg:border-solid rounded-xl flex lg:hidden items-center justify-center font-pt-sans font-normal text-base text-main duration-300 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- snabstroy:adapt-nav -->
+    <div class="adapt-nav w-full h-[100vh] fixed top-0 right-0 left-0 z-40 bg-white px-5 duration-300 ease-in-out overflow-y-auto -translate-y-full">
+        <div class="container border-t-2 border-solid border-neutral-200 py-10">
+            <div>
+                <a href="" class="block py-4 w-full font-pt-sans font-normal text-base text-black text-center">О компании</a>
+                <a href="" class="block py-4 w-full font-pt-sans font-normal text-base text-black text-center">Оплата и доставка</a>
+                <a href="" class="block py-4 w-full font-pt-sans font-normal text-base text-black text-center">Возврат</a>
+                <a href="" class="block py-4 w-full font-pt-sans font-normal text-base text-black text-center">Новости</a>
+                <a href="" class="block py-4 w-full font-pt-sans font-normal text-base text-black text-center">Контакты</a>
+                <a href="" class="block py-4 w-full font-pt-sans font-normal text-base text-black text-center">Распродажа</a>
+                <a href="" class="block py-4 w-full font-pt-sans font-normal text-base text-black text-center">Каталог</a>
+                <button class="block py-4 w-full font-pt-sans font-normal text-base text-black text-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">Поиск</button>
+                <a href="" class="block py-4 w-full font-pt-sans font-normal text-base text-black text-center">Личный кабинет</a>
+                <a href="" class="inline-block py-4 px-5 my-2 rounded-xl font-pt-sans font-normal text-base text-white text-center bg-main relative left-2/4 -translate-x-2/4">Скачать прайс</a>
+                <a href="tel:+7 999 999-99-99" class="py-4 w-full font-pt-sans font-normal text-base text-black text-center flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <span class="ml-1">+7 999 999-99-99</span>
+                </a>
+                <a href="mailto:info@snabstroy.ru" class="py-4 w-full font-pt-sans font-normal text-base text-black text-center flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
+                    </svg>
+                    <span class="ml-1">info@snabstroy.ru</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /snabstroy:adapt-nav -->
+
+    <!-- snabstroy:search -->
+    <div class="offcanvas offcanvas-bottom fixed bottom-0 flex flex-col max-w-full bg-white invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-gray-700 left-0 right-0 border-none min-h-[80vh] max-h-full" tabindex="-1" id="offcanvasSearch" aria-labelledby="offcanvasSearchLabel">
+        <div class="offcanvas-header flex items-center justify-between p-4 px-5 md:px-6">
+            <h5 class="offcanvas-title mb-0 leading-normal font-semibold" id="offcanvasSearchLabel">Поиск по каталогу</h5>
+            <button type="button" class="btn-close text-black font-bold hover:underline" data-bs-dismiss="offcanvas" aria-label="Close">
+            Закрыть
+            </button>
+        </div>
+        <div class="offcanvas-body flex-grow p-4 overflow-y-auto small px-5 md:px-6">
+            <div class="w-full h-auto">
+                <input 
+                    type="text" 
+                    class="w-full border-[1px] border-solid border-neutral-300 hover:border-neutral-400 px-4 py-3 rounded-xl font-pt-sans font-normal text-neutral-400 text-base" 
+                    placeholder="Найдите нужный товар среди сотни наименований...">
+            </div>
+            <div snabstroy-name="searh_view" class=" w-full h-[450px] opacity-30 flex items-center justify-center">
+                <div>
+                    <img src="./images/logo_img.svg" class="h-36 m-[0_auto] mb-5">
+                    <div class="font-rubik font-normal text-black text-2xl md:text-4xl text-center">Начните вводить наименование <br> товара для поиска</div>
+                </div>
+            </div>
+            <div snabstroy-name="searh_load" class="hidden w-full h-[450px] flex items-center justify-center">
+                <div>
+                    <img src="./images/logo_img.svg" class="animate-spin h-20 m-[0_auto] mb-5">
+                </div>
+            </div>
+            <div snabstroy-name="searh_null" class="hidden w-full h-[450px] flex items-center justify-center">
+                <div>
+                    <img src="./images/logo_img.svg" class="h-36 m-[0_auto] mb-5">
+                    <div class="font-rubik font-normal text-black text-2xl md:text-4xl text-center">Ксожалению, ничего не найдено</div>
+                </div>
+            </div>
+            <div snabstroy-name="searh_error" class="hidden w-full h-[450px] flex items-center justify-center">
+                <div>
+                    <img src="./images/logo_img.svg" class="h-36 m-[0_auto] mb-5">
+                    <div class="font-rubik font-normal text-black text-2xl md:text-4xl text-center">Ксожалению, произошла ошибка при загрузке данных. <br> Попробуте перезагрузить страницу.</div>
+                </div>
+            </div>
+            <div snabstroy-name="searh_content" class="hidden w-full h-auto mt-10">
+                <div class="container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-8" style="grid-template-rows: repeat(3, minmax(0, 1fr));">
+
+                    <div>
+                        <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-200 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                            <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                    <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                    <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                </div>
+                            </div>
+                            <div class="px-2 py-5 relative">
+                                <a href="" class="font-pt-sans font-normal text-sm md:text-base max-h-[70px] sm:max-h-[90px] overflow-hidden">
+                                    Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                </a>
+                                <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                    <div>
+                                        <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                        <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                    </div>
+                                    <div>
+                                        <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-200 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                            <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                    <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                    <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                </div>
+                            </div>
+                            <div class="px-2 py-5 relative">
+                                <a href="" class="font-pt-sans font-normal text-sm md:text-base max-h-[70px] sm:max-h-[90px] overflow-hidden">
+                                    Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                </a>
+                                <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                    <div>
+                                        <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                        <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                    </div>
+                                    <div>
+                                        <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-200 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                            <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                    <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                    <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                </div>
+                            </div>
+                            <div class="px-2 py-5 relative">
+                                <a href="" class="font-pt-sans font-normal text-sm md:text-base max-h-[70px] sm:max-h-[90px] overflow-hidden">
+                                    Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                </a>
+                                <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                    <div>
+                                        <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                        <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                    </div>
+                                    <div>
+                                        <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-200 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                            <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                    <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                    <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                </div>
+                            </div>
+                            <div class="px-2 py-5 relative">
+                                <a href="" class="font-pt-sans font-normal text-sm md:text-base max-h-[70px] sm:max-h-[90px] overflow-hidden">
+                                    Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                </a>
+                                <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                    <div>
+                                        <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                        <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                    </div>
+                                    <div>
+                                        <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-200 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                            <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                    <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                    <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                </div>
+                            </div>
+                            <div class="px-2 py-5 relative">
+                                <a href="" class="font-pt-sans font-normal text-sm md:text-base max-h-[70px] sm:max-h-[90px] overflow-hidden">
+                                    Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                </a>
+                                <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                    <div>
+                                        <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                        <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                    </div>
+                                    <div>
+                                        <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-200 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                            <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                    <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                    <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                </div>
+                            </div>
+                            <div class="px-2 py-5 relative">
+                                <a href="" class="font-pt-sans font-normal text-sm md:text-base max-h-[70px] sm:max-h-[90px] overflow-hidden">
+                                    Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                </a>
+                                <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                    <div>
+                                        <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                        <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                    </div>
+                                    <div>
+                                        <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-200 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                            <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                    <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                    <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                </div>
+                            </div>
+                            <div class="px-2 py-5 relative">
+                                <a href="" class="font-pt-sans font-normal text-sm md:text-base max-h-[70px] sm:max-h-[90px] overflow-hidden">
+                                    Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                </a>
+                                <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                    <div>
+                                        <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                        <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                    </div>
+                                    <div>
+                                        <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-200 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                            <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                    <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                    <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                </div>
+                            </div>
+                            <div class="px-2 py-5 relative">
+                                <a href="" class="font-pt-sans font-normal text-sm md:text-base max-h-[70px] sm:max-h-[90px] overflow-hidden">
+                                    Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                </a>
+                                <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                    <div>
+                                        <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                        <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                    </div>
+                                    <div>
+                                        <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /snabstroy:search -->
+
+    <main class="w-full h-auto">
+
+        <!-- snabstroy:name-category -->
+        <div class="w-full h-auto border-t-[1px] border-solid border-zinc-200">
+            <div class="container py-14 md:py-24 px-5 xl:px-0">
+                <div class="container border-[1px] border-solid border-zinc-100 rounded-xl block sm:flex sm:items-center sm:justify-start p-0 sm:p-5">
+                    <img src="./images/catalog/1.png" class="hidden sm:block h-[150px] mr-8">
+                    <div>
+                        <h3 class="font-rubik font-bold text-3xl sm:text-4xl uppercase text-black">Пиломатериалы ДПК фанера</h3>
+                        <p class="font-pt-sans font-normal text-base text-black mt-2">Великолепные характеристики прочности и надежности. Отечественное происхождение позволяет нам предлагать самые привлекательные для потребителей расценки</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /snabstroy:name-category -->
+
+        <div class="w-full h-auto">
+            <div class="container block lg:grid lg:grid-cols-[20%_80%] lg:grid-rows-1 pb-14 md:pb-24">
+                <div class="hidden lg:block border-r-[1px] border-solid border-zinc-200">
+
+                    <!-- snabstroy:child-category -->
+                    <div class="w-full h-auto">
+                        <h4 class="font-pt-sans font-bold text-sm text-black mt-8 mb-3">Пиломатериалы ДПК фанера</h4>
+
+                        <div class="w-full h-auto">
+                            <div class="border-l-2 border-solid border-neutral-400 relative after:block after:bg-white after:w-4 after:h-[11px] after:-left-2 after:absolute after:top-0 before:block before:bg-white before:w-4 before:h-[11px] before:-left-2 before:absolute before:bottom-0">
+                                <div>
+                                    <div class="flex items-center justify-start">
+                                        <div class="h-[2px] w-5 bg-neutral-400 mr-2"></div>
+                                        <a href="" class="font-pt-sans font-normal text-base text-main hover:underline">Брус, доска (15)</a>
+                                    </div>
+                                    <div class="flex items-center justify-start">
+                                        <div class="h-[2px] w-5 bg-neutral-400 mr-2"></div>
+                                        <a href="" class="font-pt-sans font-normal text-base text-main hover:underline">Вагонка, половая доска (10)</a>
+                                    </div>
+                                    <div class="flex items-center justify-start">
+                                        <div class="h-[2px] w-5 bg-neutral-400 mr-2"></div>
+                                        <a href="" class="font-pt-sans font-normal text-base text-main hover:underline">Доска ДПК (10)</a>
+                                    </div>
+                                    <div class="flex items-center justify-start">
+                                        <div class="h-[2px] w-5 bg-neutral-400 mr-2"></div>
+                                        <a href="" class="font-pt-sans font-normal text-base text-main hover:underline">Фанера (9)</a>
+                                    </div>
+                                    <div class="flex items-center justify-start">
+                                        <div class="h-[2px] w-5 bg-neutral-400 mr-2"></div>
+                                        <a href="" class="font-pt-sans font-normal text-base text-main hover:underline">Брус, доска (15)</a>
+                                    </div>              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /snabstroy:child-category -->
+
+                    <!-- snabstroy:filters -->
+                    <div class="w-full h-auto">
+
+                        <div class="w-full h-auto">
+                            <h4 class="font-pt-sans font-bold text-sm text-black mt-8 mb-3">Материал</h4>
+                            <label for="Сосна" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                <input type="checkbox" name="" id="Сосна" class="mr-2">
+                                Сосна
+                            </label>
+                            <label for="Ель" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                <input type="checkbox" name="" id="Ель" class="mr-2">
+                                Ель
+                            </label>
+                            <label for="Дуб" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                <input type="checkbox" name="" id="Дуб" class="mr-2">
+                                Дуб
+                            </label>
+                        </div>
+
+                        <div class="w-full h-auto">
+                            <h4 class="font-pt-sans font-bold text-sm text-black mt-8 mb-3">Толщина, мм</h4>
+                            <label for="25 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                <input type="checkbox" name="" id="25 мм" class="mr-2">
+                                25 мм
+                            </label>
+                            <label for="30 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                <input type="checkbox" name="" id="30 мм" class="mr-2">
+                                30 мм
+                            </label>
+                            <label for="50 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                <input type="checkbox" name="" id="50 мм" class="mr-2">
+                                50 мм
+                            </label>
+                            <label for="25 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                <input type="checkbox" name="" id="25 мм" class="mr-2">
+                                25 мм
+                            </label>
+                            <label for="30 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                <input type="checkbox" name="" id="30 мм" class="mr-2">
+                                30 мм
+                            </label>
+                            <label for="50 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                <input type="checkbox" name="" id="50 мм" class="mr-2">
+                                50 мм
+                            </label>
+                            <label for="25 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                <input type="checkbox" name="" id="25 мм" class="mr-2">
+                                25 мм
+                            </label>
+                            <label for="30 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                <input type="checkbox" name="" id="30 мм" class="mr-2">
+                                30 мм
+                            </label>
+                            <label for="50 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                <input type="checkbox" name="" id="50 мм" class="mr-2">
+                                50 мм
+                            </label>
+                        </div>
+
+                        <div class="w-full h-auto">
+                            <h4 class="font-pt-sans font-bold text-sm text-black mt-8 mb-3">Дополнительные характеристики</h4>
+                            <label for="Естественный способ сушки" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                <input type="checkbox" name="" id="Естественный способ сушки" class="mr-2">
+                                Естественный способ сушки
+                            </label>
+                            <label for="Дисковый распил" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                <input type="checkbox" name="" id="Дисковый распил" class="mr-2">
+                                Дисковый распил
+                            </label>
+                            <label for="Ленточный распил" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                <input type="checkbox" name="" id="Ленточный распил" class="mr-2">
+                                Ленточный распил
+                            </label>
+                        </div>
+
+                        <div class="w-full h-auto">
+                            <a href="" class="inline-block px-5 py-3 mt-8 border-2 border-main border-solid bg-main hover:bg-white rounded-xl font-pt-sans font-normal text-base text-white hover:text-main duration-300 ease-in-out">
+                                Применить
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- /snabstroy:filters -->
+
+                </div>
+                <div class="px-5 sm:px-0">
+
+                    <!-- snabstory:filters-sort-adapt -->
+                    <button class="lg:hidden w-full h-auto px-5 py-2 mb-8 shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl flex items-center justify-between" 
+                        type="button" 
+                        data-bs-toggle="offcanvas" 
+                        data-bs-target="#offcanvasSortAdapt" 
+                        aria-controls="offcanvasSortAdapt"
+                    >
+                        <span class="font-pt-sans font-bold text-sm text-black">Фильтры и настройки отображения</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-main" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </button>
+
+                    <div class="offcanvas offcanvas-bottom fixed bottom-0 flex flex-col max-w-full bg-white invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-gray-700 left-0 right-0 border-none min-h-[90vh] max-h-full" 
+                        tabindex="-1"
+                        id="offcanvasSortAdapt" 
+                        aria-labelledby="offcanvasSortAdaptLabel"
+                    >
+                        <div class="offcanvas-header flex items-center justify-between p-4">
+                          <h5 class="offcanvas-title mb-0 leading-normal font-semibold" id="offcanvasSortAdaptLabel">Фильтры и отображения</h5>
+                            <button type="button" class="btn-close text-black font-bold hover:underline" data-bs-dismiss="offcanvas" aria-label="Close">
+                                Закрыть
+                            </button>
+                        </div>
+                        <div class="offcanvas-body flex-grow p-4 overflow-y-auto small">
+                          <div class="w-full h-auto">
+
+                            <div class="flex items-center justify-start mb-2">
+                                <h4 class="font-pt-sans font-bold text-sm text-black">Сортировка:</h4>
+                                <select name="" id="">
+                                    <option value="">по умолчанию</option>
+                                    <option value="">сначала новые</option>
+                                    <option value="">сначала дороже</option>
+                                    <option value="">сначала новые</option>
+                                </select>
+                            </div>
+    
+                            <div class="flex items-center justify-start">
+                                <h4 class="font-pt-sans font-bold text-sm text-black">Вывод товаров:</h4>
+                                <select name="" id="">
+                                    <option value="">15</option>
+                                    <option value="">20</option>
+                                    <option value="">50</option>
+                                    <option value="">100</option>
+                                </select>
+                            </div>
+
+                            <div class="w-full h-auto">
+                                <h4 class="font-pt-sans font-bold text-sm text-black mt-8 mb-3">Пиломатериалы ДПК фанера</h4>
+        
+                                <div class="w-full h-auto">
+                                    <div class="border-l-2 border-solid border-neutral-400 relative after:block after:bg-white after:w-4 after:h-[11px] after:-left-2 after:absolute after:top-0 before:block before:bg-white before:w-4 before:h-[11px] before:-left-2 before:absolute before:bottom-0">
+                                        <div>
+                                            <div class="flex items-center justify-start">
+                                                <div class="h-[2px] w-5 bg-neutral-400 mr-2"></div>
+                                                <a href="" class="font-pt-sans font-normal text-base text-main hover:underline">Брус, доска (15)</a>
+                                            </div>
+                                            <div class="flex items-center justify-start">
+                                                <div class="h-[2px] w-5 bg-neutral-400 mr-2"></div>
+                                                <a href="" class="font-pt-sans font-normal text-base text-main hover:underline">Вагонка, половая доска (10)</a>
+                                            </div>
+                                            <div class="flex items-center justify-start">
+                                                <div class="h-[2px] w-5 bg-neutral-400 mr-2"></div>
+                                                <a href="" class="font-pt-sans font-normal text-base text-main hover:underline">Доска ДПК (10)</a>
+                                            </div>
+                                            <div class="flex items-center justify-start">
+                                                <div class="h-[2px] w-5 bg-neutral-400 mr-2"></div>
+                                                <a href="" class="font-pt-sans font-normal text-base text-main hover:underline">Фанера (9)</a>
+                                            </div>
+                                            <div class="flex items-center justify-start">
+                                                <div class="h-[2px] w-5 bg-neutral-400 mr-2"></div>
+                                                <a href="" class="font-pt-sans font-normal text-base text-main hover:underline">Брус, доска (15)</a>
+                                            </div>              
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="w-full h-auto">
+                                <h4 class="font-pt-sans font-bold text-sm text-black mt-8 mb-3">Материал</h4>
+                                <label for="Сосна" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                    <input type="checkbox" name="" id="Сосна" class="mr-2">
+                                    Сосна
+                                </label>
+                                <label for="Ель" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                    <input type="checkbox" name="" id="Ель" class="mr-2">
+                                    Ель
+                                </label>
+                                <label for="Дуб" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                    <input type="checkbox" name="" id="Дуб" class="mr-2">
+                                    Дуб
+                                </label>
+                            </div>
+    
+                            <div class="w-full h-auto">
+                                <h4 class="font-pt-sans font-bold text-sm text-black mt-8 mb-3">Толщина, мм</h4>
+                                <label for="25 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                    <input type="checkbox" name="" id="25 мм" class="mr-2">
+                                    25 мм
+                                </label>
+                                <label for="30 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                    <input type="checkbox" name="" id="30 мм" class="mr-2">
+                                    30 мм
+                                </label>
+                                <label for="50 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                    <input type="checkbox" name="" id="50 мм" class="mr-2">
+                                    50 мм
+                                </label>
+                                <label for="25 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                    <input type="checkbox" name="" id="25 мм" class="mr-2">
+                                    25 мм
+                                </label>
+                                <label for="30 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                    <input type="checkbox" name="" id="30 мм" class="mr-2">
+                                    30 мм
+                                </label>
+                                <label for="50 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                    <input type="checkbox" name="" id="50 мм" class="mr-2">
+                                    50 мм
+                                </label>
+                                <label for="25 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                    <input type="checkbox" name="" id="25 мм" class="mr-2">
+                                    25 мм
+                                </label>
+                                <label for="30 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                    <input type="checkbox" name="" id="30 мм" class="mr-2">
+                                    30 мм
+                                </label>
+                                <label for="50 мм" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                    <input type="checkbox" name="" id="50 мм" class="mr-2">
+                                    50 мм
+                                </label>
+                            </div>
+    
+                            <div class="w-full h-auto">
+                                <h4 class="font-pt-sans font-bold text-sm text-black mt-8 mb-3">Дополнительные характеристики</h4>
+                                <label for="Естественный способ сушки" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                    <input type="checkbox" name="" id="Естественный способ сушки" class="mr-2">
+                                    Естественный способ сушки
+                                </label>
+                                <label for="Дисковый распил" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                    <input type="checkbox" name="" id="Дисковый распил" class="mr-2">
+                                    Дисковый распил
+                                </label>
+                                <label for="Ленточный распил" class="block cursor-pointer font-pt-sans font-normal text-neutral-700 text-base">
+                                    <input type="checkbox" name="" id="Ленточный распил" class="mr-2">
+                                    Ленточный распил
+                                </label>
+                            </div>
+    
+                            <div class="w-full h-auto">
+                                <a href="" class="block text-center px-5 py-3 mt-8 border-2 border-main border-solid bg-main hover:bg-white rounded-xl font-pt-sans font-normal text-base text-white hover:text-main duration-300 ease-in-out">
+                                    Применить
+                                </a>
+                            </div>
+
+                          </div>
+                        </div>
+                    </div>
+                    <!-- /snabstory:filters-sort-adapt -->
+
+                    <!-- snabstroy:sort -->
+                    <div class="w-full h-auto pl-0 lg:pl-24 mb-8 flex items-center justify-between">
+                        <div class="hidden sm:flex items-center justify-center">
+                            <h4 class="font-pt-sans font-bold text-sm text-black">Сортировка:</h4>
+                            <select name="" id="">
+                                <option value="">по умолчанию</option>
+                                <option value="">сначала новые</option>
+                                <option value="">сначала дороже</option>
+                                <option value="">сначала новые</option>
+                            </select>
+                        </div>
+
+                        <div class="hidden sm:flex items-center justify-center">
+                            <h4 class="font-pt-sans font-bold text-sm text-black">Вывод товаров:</h4>
+                            <select name="" id="">
+                                <option value="">15</option>
+                                <option value="">20</option>
+                                <option value="">50</option>
+                                <option value="">100</option>
+                            </select>
+                        </div>
+
+                        <div class="flex items-center justify-center">
+                            <h4 class="font-pt-sans font-normal text-sm text-neutral-400">Всего товаров:  52</h4>
+                        </div>
+                    </div>
+                    <!-- /snabstroy:sort -->
+
+                    <!-- snabstroy:products -->
+                    <div class="w-full h-auto grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-8 pl-0 lg:pl-24">
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX51891 vdv ew ew evgweeg ewge fewffe qewwe
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="animate-pulse px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="block font-pt-sans font-bold text-xs px-2 rounded-fuwhite m10-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="font-pt-sans font-normal text-sm md:text-base max-h-[70px] sm:max-h-[90px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="bg-white shadow-[0_0_20px_0] shadow-neutral-100 border-[1px] border-solid border-neutral-100 rounded-xl grid grid-cols-1 grid-rows-2 h-[400px]">
+                                <div class="bg-center bg-[length:90%_auto] bg-no-repeat relative" style="background-image: url('./images/demo/1.png');">
+                                    <div class="absolute bottom-0 left-2 flex items-center justify-start">
+                                        <div class="hidden md:block font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white">Металлочерепица</div>
+                                        <div class="font-pt-sans font-bold text-xs px-2 rounded-full bg-main text-white ml-1">-5%</div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-5 relative">
+                                    <a href="" class="block font-pt-sans font-normal text-sm md:text-base max-h-[100px] overflow-hidden">
+                                        Металлочерепица Монтеррей 0.4мм Полиэстер Россия RAL 7004 (серый) SteelX
+                                    </a>
+                                    <div class="h-auto flex items-center justify-between mt-5 absolute right-2 bottom-5 left-2">
+                                        <div>
+                                            <div class="font-pt-sans font-normal text-xs md:text-sm text-neutral-400 line-through">355,00 ₽</div>
+                                            <div class="font-pt-sans font-bold text-xl md:text-2xl text-main">334,40 ₽</div>
+                                        </div>
+                                        <div>
+                                            <a href="" class="px-3 py-3 border-2 border-main border-solid hover:bg-main rounded-xl flex items-center justify-center font-pt-sans font-normal text-base text-main hover:text-white duration-300 ease-in-out">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /snabstroy:products -->
+
+                    <!-- snabstroy:pagination -->
+                    <div class="flex justify-center sm:justify-end mt-14">
+                        <nav aria-label="Page navigation example">
+                          <ul class="flex list-style-none">
+                            <li class="page-item">
+                                <a class="page-link text-base py-2 px-2 mx-1 relative block bg-transparent outline-none transition-all duration-300 rounded-md text-gray-800 hover:text-gray-800 hover:bg-gray-200 border-2 border-solid border-main"
+                                href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-main" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link text-base py-2 px-4 mx-1 relative block border-2 border-solid border-main bg-main transition-all duration-300 rounded-md text-white"
+                                href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link text-base py-2 px-4 mx-1 relative block border-2 border-solid border-white bg-transparent outline-none transition-all duration-300 rounded-md text-gray-800 hover:text-gray-800 hover:bg-gray-200"
+                                href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link text-base py-2 px-4 mx-1 relative block border-2 border-solid border-white bg-transparent outline-none transition-all duration-300 rounded-md text-gray-800 hover:text-gray-800 hover:bg-gray-200"
+                                href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link text-base py-2 px-2 mx-1 relative block bg-transparent outline-none transition-all duration-300 rounded-md text-gray-800 hover:text-gray-800 hover:bg-gray-200 border-2 border-solid border-main"
+                                href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-main" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </li>
+                          </ul>
+                        </nav>
+                    </div>
+                    <!-- /snabstroy:pagination -->
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer class="w-full h-auto bg-zinc-800">
+        <div class="container py-16 px-5 xl:px-0 block sm:grid grid-cols-2 lg:grid-cols-[40%_60%] grid-rows-1">
+            <div class="border-0 sm:border-r-2 border-solid border-zinc-700 relative">
+                <a href="">
+                    <img src="./images/logo_white.png" class="h-10">
+                </a>
+                <p class="mt-5 font-pt-sans font-normal text-sm text-zinc-400 leading-7 max-w-[450px] 2xl:max-w-[515px] pr-0 sm:pr-5 lg:pl-0 ">
+                    Качественные строительные материалы и инструменты по выгодным ценам. Множество вариантов доставки. Богатый выбор среди быстрых и экономичных способов.  Мы даем возможность оплачивать товар при получении, без предоплат и завышенной стоимости
+                </p>
+                <p class="max-w-[450px] 2xl:max-w-[515px] pr-0 sm:pr-5 lg:pl-0  absolute bottom-0 left-0 font-pt-sans font-normal text-[10px] text-zinc-500 hidden sm:block">
+                    Вся представленная на сайте информация, касающаяся стоимости, носит информационный характер и не является публичной офертой
+                </p>
+            </div>
+            <div class="block lg:flex items-start justify-around pl-0 sm:pl-5 lg:pl-0">
+                <div class="mt-10 sm:mt-0">
+                    <h3 class="font-rubik font-bold text-white uppercase text-base mb-4">Снабстрой</h3>
+                    <div class="w-full h-auto">
+                        <a href="" class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400 hover:underline">О компании</a>
+                        <a href="" class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400 hover:underline">Оплата и доставка</a>
+                        <a href="" class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400 hover:underline">Возврат</a>
+                        <a href="" class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400 hover:underline">Новости</a>
+                        <a href="" class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400 hover:underline">Распродажа</a>
+                        <a href="" class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400 hover:underline">Личный кабинетc</a>
+                        <a href="" class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400 hover:underline">Политика конфиденциальности</a>
+                    </div>
+                </div>
+
+                <div class="hidden xl:block">
+                    <h3 class="font-rubik font-bold text-white uppercase text-base mb-4">Каталог</h3>
+                    <div class="w-full h-auto">
+                        <a href="" class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400 hover:underline">Пиломатериалы ДПК фанера</a>
+                        <a href="" class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400 hover:underline">Блоки строительные</a>
+                        <a href="" class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400 hover:underline">Кровельные материалы</a>
+                        <a href="" class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400 hover:underline">Тротуарная плитка</a>
+                        <a href="" class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400 hover:underline">Строительные смеси</a>
+                        <a href="" class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400 hover:underline">Водостоки</a>
+                        <a href="" class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400 hover:underline">Сайдинг, софиты</a>
+                        <a href="" class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400 hover:underline">Инструменты</a>
+                    </div>
+                </div>
+
+                <div class="mt-10 lg:mt-0">
+                    <h3 class="font-rubik font-bold text-white uppercase text-base mb-4">Контактная информация</h3>
+                    <div class="w-full h-auto">
+                        <div class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400">
+                            Почта: <a href="mailto:info@snabstroy.ru" class="text-zinc-300 hover:underline pl-5">info@snabstroy.ru</a>
+                        </div>
+                        <div class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400">
+                            Телефон: <a href="tel:+7 999 999-99-99" class="text-zinc-300 hover:underline pl-5">+7 999 999-99-99</a>
+                        </div>
+                        <div class="block mb-3 last:mb-0 font-pt-sans font-normal text-sm text-zinc-400">
+                           Адрес: <span class="text-zinc-300 pl-5">Москва, Красная площадь, д. 1</span>
+                        </div>
+                        <div class="mt-8">
+                            <a href="">
+                                <img src="./images/vk.png" class="hover:scale-105 duration-300 ease-in-out">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-10 font-pt-sans font-normal text-[10px] text-zinc-500 block sm:hidden">
+                    Вся представленная на сайте информация, касающаяся стоимости, носит информационный характер и не является публичной офертой
+                </p>
+            </div>
+        </div>
+
+        <div class="w-full bg-neutral-900 h-[60px]">
+            <div class="container h-full flex items-center justify-between px-5">
+                <div class="font-pt-sans font-normal text-sm text-zinc-500">
+                    © Снабстрой, 2022
+                </div>
+                <a href="https://ideait.ru/" class="flex items-center justify-center">
+                    <span class="font-pt-sans font-normal text-sm text-zinc-500 mr-2">Сайт разработан в </span>
+                    <img src="./images/ideait_logo.png" class="h-8">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/owl/owl.carousel.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</body>
+</html>
